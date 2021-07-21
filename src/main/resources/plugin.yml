@@ -1,0 +1,13 @@
+name: DamageDrops
+version: ${project.version}
+main: me.andyw19.damagedrops.DamageDrops
+api-version: 1.17
+prefix: DamageDrops
+authors: [ AndyW19 ]
+description: Mobs drop loot when taking damage
+commands:
+  damagedropsreload:
+    description: Reload plugin
+    usage: /<command>
+    permission: damagedrops.reload
+

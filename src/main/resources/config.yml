@@ -1,0 +1,4 @@
+drop_chance_interval: 1000
+golemdrops: true
+skeletondrops: true
+zombiedrops: true
