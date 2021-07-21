@@ -21,7 +21,7 @@ public class ReloadPlugin implements CommandExecutor {
         if (sender instanceof Player) {
             Player p = (Player) sender;
             DamageDrops.getSettings().reload();
-            p.sendMessage(ChatColor.YELLOW + "Plugin reloaded");
+            p.sendMessage(ChatColor.GOLD + "DamageDrops " + ChatColor.YELLOW + "reloaded");
         }
         return true;
     }

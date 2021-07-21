@@ -13,6 +13,9 @@ public class Settings {
     private boolean golemDrops;
     private boolean skeletonDrops;
     private boolean zombieDrops;
+    private boolean creeperDrops;
+    private boolean beeDrops;
+    private boolean blazeDrops;
 
     public Settings(DamageDrops damageDrops) {
         this.plugin = damageDrops;
@@ -30,6 +33,9 @@ public class Settings {
             this.golemDrops = config.getBoolean("golemdrops", true);
             this.skeletonDrops = config.getBoolean("skeletondrops", true);
             this.zombieDrops = config.getBoolean("zombiedrops", true);
+            this.creeperDrops = config.getBoolean("creeperdrops", true);
+            this.beeDrops = config.getBoolean("beedrops", true);
+            this.blazeDrops = config.getBoolean("blazedrops", true);
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -52,4 +58,16 @@ public class Settings {
     public boolean isZombieDrops() { return zombieDrops; }
 
     public boolean isSpawnerDrops() { return spawnerDrops; }
+
+    public boolean isCreeperDrops() {
+        return creeperDrops;
+    }
+
+    public boolean isBeeDrops() {
+        return beeDrops;
+    }
+
+    public boolean isBlazeDrops() {
+        return blazeDrops;
+    }
 }

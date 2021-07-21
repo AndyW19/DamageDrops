@@ -1,4 +1,7 @@
 drop_chance_interval: 1000
+spawnerdrops: false
 golemdrops: true
 skeletondrops: true
 zombiedrops: true
+creeperdrops: true
+beedrops: true

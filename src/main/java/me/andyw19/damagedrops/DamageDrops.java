@@ -21,8 +21,7 @@ public final class DamageDrops extends JavaPlugin {
     @Override
     public void onEnable() {
         // Plugin startup logic
-        saveDefaultConfig();
-        settings.reload();
+        registerConfig();
         getServer().getPluginManager().registerEvents(new DamageListener(this), this);
         this.getCommand("damagedropsreload").setExecutor(new ReloadPlugin(this));
         System.out.println("DamageDrops has loaded");
@@ -32,6 +31,13 @@ public final class DamageDrops extends JavaPlugin {
     public void onDisable() {
         // Plugin shutdown logic
         System.out.println("DamageDrops has unloaded");
+    }
+
+    private void registerConfig() {
+        saveDefaultConfig();
+        getConfig().options().copyDefaults(true);
+        saveConfig();
+        settings.reload();
     }
 
 
