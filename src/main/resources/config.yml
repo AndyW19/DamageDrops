@@ -1,7 +1,33 @@
 drop_chance_interval: 1000
 spawnerdrops: false
-golemdrops: true
-skeletondrops: true
-zombiedrops: true
-creeperdrops: true
-beedrops: true
+mobs:
+  creeper:
+    creeperdrops: true
+    commonlootchance: 0.3
+    mediumlootchance: 0.15
+    rarelootchance: 0.02
+  zombie:
+    zombiedrops: true
+    commonlootchance: 0.3
+    mediumlootchance: 0.15
+    rarelootchance: 0.02
+  skeleton:
+    skeletondrops: true
+    commonlootchance: 0.3
+    mediumlootchance: 0.15
+    rarelootchance: 0.02
+  irongolem:
+    golemdrops: true
+    commonlootchance: 0.3
+    mediumlootchance: 0.15
+    rarelootchance: 0.02
+  blaze:
+    blazedrops: true
+    commonlootchance: 0.02
+    mediumlootchance: 0.02
+    rarelootchance: 0.02
+  bee:
+    beedrops: true
+    commonlootchance: 0.3
+    mediumlootchance: 0.15
+    rarelootchance: 0.02

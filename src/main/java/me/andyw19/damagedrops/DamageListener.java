@@ -34,10 +34,15 @@ public class DamageListener implements Listener {
     private final Material [] creeperLoot = {Material.GUNPOWDER, Material.FIRE_CHARGE, Material.TNT};
     private final Material [] golemLoot = {Material.RAW_IRON, Material.POPPY};
     private final Material [] beeLoot = {Material.HONEYCOMB};
-    private final Material [] blazeLoot = {Material.BLAZE_ROD};
+    private final Material [] blazeLoot = {Material.BLAZE_ROD, Material.BLAZE_ROD, Material.BLAZE_ROD};
 
     private double [] lootLevelArray = {0.25, 0.1, 0.03};
-    private double [] blazeRareLoot = {0.05};
+    private final double [] creeperLootChance = DamageDrops.getSettings().getCreeperDropChance();
+    private final double [] zombieLootChance = DamageDrops.getSettings().getZombieDropChance();
+    private final double [] skeletonLootChance = DamageDrops.getSettings().getSkeletonDropChance();
+    private final double [] golemLootChance = DamageDrops.getSettings().getGolemDropChance();
+    private final double [] blazeLootChance = DamageDrops.getSettings().getBlazeDropChance();
+    private final double [] beeLootChance = DamageDrops.getSettings().getBeeDropChance();
 
 
     @EventHandler
@@ -45,22 +50,22 @@ public class DamageListener implements Listener {
 
         switch (event.getEntity().getType()) {
             case CREEPER:
-                creeperCanPass = mobCheck(event, creeperCanPass, ironToNetheriteAxeSword, DamageDrops.getSettings().isCreeperDrops(), 1, 2, 3, creeperLoot, true, lootLevelArray);
+                creeperCanPass = mobCheck(event, creeperCanPass, ironToNetheriteAxeSword, DamageDrops.getSettings().isCreeperDrops(), 1, 2, 3, creeperLoot, true, creeperLootChance);
                 break;
             case ZOMBIE: case ZOMBIE_VILLAGER: case ZOMBIE_HORSE: case DROWNED:
-                zombieCanPass = mobCheck(event, zombieCanPass, ironToNetheriteAxeSword, DamageDrops.getSettings().isZombieDrops(), 1, 2, 1, zombieLoot, true, lootLevelArray);
+                zombieCanPass = mobCheck(event, zombieCanPass, ironToNetheriteAxeSword, DamageDrops.getSettings().isZombieDrops(), 1, 2, 1, zombieLoot, true, zombieLootChance);
                 break;
             case SKELETON: case SKELETON_HORSE: case WITHER_SKELETON:
-                skeletonCanPass = mobCheck(event, skeletonCanPass, ironToNetheriteAxeSword, DamageDrops.getSettings().isSkeletonDrops(), 1, 2, 2, skeletonLoot, true, lootLevelArray);
+                skeletonCanPass = mobCheck(event, skeletonCanPass, ironToNetheriteAxeSword, DamageDrops.getSettings().isSkeletonDrops(), 1, 2, 2, skeletonLoot, true, skeletonLootChance);
                 break;
             case IRON_GOLEM:
-                golemCanPass = mobCheck(event, golemCanPass, ironToNetheritePickaxe, DamageDrops.getSettings().isGolemDrops(), 1, 2, 2, golemLoot, true, lootLevelArray);
+                golemCanPass = mobCheck(event, golemCanPass, ironToNetheritePickaxe, DamageDrops.getSettings().isGolemDrops(), 1, 2, 2, golemLoot, true, golemLootChance);
                 break;
             case BEE:
-                beeCanPass = mobCheck(event, beeCanPass, ironToNetheritePickaxe, DamageDrops.getSettings().isBeeDrops(), 1, 1, 1, beeLoot, false, lootLevelArray);
+                beeCanPass = mobCheck(event, beeCanPass, ironToNetheritePickaxe, DamageDrops.getSettings().isBeeDrops(), 1, 1, 1, beeLoot, false, beeLootChance);
                 break;
             case BLAZE:
-                blazeCanPass = mobCheck(event, blazeCanPass, ironToNetheriteAxeSword, DamageDrops.getSettings().isBlazeDrops(), 1, 1, 1, blazeLoot, true, blazeRareLoot);
+                blazeCanPass = mobCheck(event, blazeCanPass, ironToNetheriteAxeSword, DamageDrops.getSettings().isBlazeDrops(), 1, 1, 1, blazeLoot, true, blazeLootChance);
                 break;
         }
     }

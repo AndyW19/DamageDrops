@@ -6,7 +6,7 @@
 
     <groupId>me.andyw19</groupId>
     <artifactId>damagedrops</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.4</version>
     <packaging>jar</packaging>
 
     <name>DamageDrops</name>
