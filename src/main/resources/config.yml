@@ -3,31 +3,89 @@ spawnerdrops: false
 mobs:
   creeper:
     creeperdrops: true
+    highestlootnum: 2
     commonlootchance: 0.3
     mediumlootchance: 0.15
     rarelootchance: 0.02
+    loot:
+      lootlevel: 3
+      commonloot:
+        - GUNPOWDER
+      mediumloot:
+        - FIRE_CHARGE
+        - FLINT
+      rareloot:
+        - TNT
   zombie:
     zombiedrops: true
+    highestlootnum: 2
     commonlootchance: 0.3
     mediumlootchance: 0.15
     rarelootchance: 0.02
+    loot:
+      lootlevel: 1
+      commonloot:
+        - GUNPOWDER
+      mediumloot:
+        - GUNPOWDER
+      rareloot:
+        - GUNPOWDER
   skeleton:
     skeletondrops: true
+    highestlootnum: 2
     commonlootchance: 0.3
     mediumlootchance: 0.15
     rarelootchance: 0.02
+    loot:
+      lootlevel: 1
+      commonloot:
+        - BONE
+        - BONEMEAL
+      mediumloot:
+        - BONE
+        - BONEMEAL
+      rareloot:
+        - BONE
+        - BONEMEAL
   irongolem:
     golemdrops: true
+    highestlootnum: 2
     commonlootchance: 0.3
     mediumlootchance: 0.15
     rarelootchance: 0.02
+    loot:
+      lootlevel: 2
+      commonloot:
+        - RAW_IRON
+      mediumloot:
+        - POPPY
+      rareloot:
+        - POPPY
   blaze:
     blazedrops: true
+    highestlootnum: 2
     commonlootchance: 0.02
     mediumlootchance: 0.02
     rarelootchance: 0.02
+    loot:
+      lootlevel: 3
+      commonloot:
+        - BLAZE_ROD
+      mediumloot:
+        - BLAZE_ROD
+      rareloot:
+        - BLAZE_ROD
   bee:
     beedrops: true
+    highestlootnum: 1
     commonlootchance: 0.3
     mediumlootchance: 0.15
     rarelootchance: 0.02
+    loot:
+      lootlevel: 1
+      commonloot:
+        - HONEYCOMB
+      mediumloot:
+        - HONEYCOMB
+      rareloot:
+        - HONEYCOMB
