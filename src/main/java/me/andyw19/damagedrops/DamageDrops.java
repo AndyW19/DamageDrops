@@ -2,6 +2,7 @@ package me.andyw19.damagedrops;
 
 import me.andyw19.damagedrops.commands.ReloadPlugin;
 import me.andyw19.damagedrops.config.Settings;
+import me.andyw19.damagedrops.util.Metrics;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class DamageDrops extends JavaPlugin {
@@ -22,6 +23,7 @@ public final class DamageDrops extends JavaPlugin {
     public void onEnable() {
         // Plugin startup logic
         registerConfig();
+        registerBstat();
         getServer().getPluginManager().registerEvents(new DamageListener(this), this);
         this.getCommand("damagedropsreload").setExecutor(new ReloadPlugin(this));
         System.out.println("DamageDrops has loaded");
@@ -40,5 +42,9 @@ public final class DamageDrops extends JavaPlugin {
         settings.reload();
     }
 
+    private void registerBstat() {
+        int id = 12220;
+        Metrics metrics = new Metrics(this, id);
+    }
 
 }

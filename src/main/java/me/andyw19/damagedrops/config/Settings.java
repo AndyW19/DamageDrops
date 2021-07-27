@@ -70,7 +70,6 @@ public class Settings {
     public Settings(DamageDrops damageDrops) {
         this.plugin = damageDrops;
     }
-
     public void reload() {
         plugin.reloadConfig();
         reloadFromFile(plugin.getConfig());

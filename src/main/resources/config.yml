@@ -40,13 +40,13 @@ mobs:
       lootlevel: 1
       commonloot:
         - BONE
-        - BONEMEAL
+        - BONE_MEAL
       mediumloot:
         - BONE
-        - BONEMEAL
+        - BONE_MEAL
       rareloot:
         - BONE
-        - BONEMEAL
+        - BONE_MEAL
   irongolem:
     golemdrops: true
     highestlootnum: 2
