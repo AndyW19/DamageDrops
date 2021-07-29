@@ -25,11 +25,11 @@ mobs:
     loot:
       lootlevel: 1
       commonloot:
-        - GUNPOWDER
+        - ROTTEN_FLESH
       mediumloot:
-        - GUNPOWDER
+        - ROTTEN_FLESH
       rareloot:
-        - GUNPOWDER
+        - ROTTEN_FLESH
   skeleton:
     skeletondrops: true
     highestlootnum: 2
@@ -89,3 +89,17 @@ mobs:
         - HONEYCOMB
       rareloot:
         - HONEYCOMB
+  piglin:
+    piglindrops: true
+    highestlootnum: 2
+    commonlootchance: 0.3
+    mediumlootchance: 0.15
+    rarelootchance: 0.02
+    loot:
+      lootlevel: 3
+      commonloot:
+        - ROTTEN_FLESH
+      mediumloot:
+        - GOLD_NUGGET
+      rareloot:
+        - GOLD_INGOT
